@@ -3,13 +3,13 @@ import AboutMe from "./components/AboutMe";
 import MyProjects from "./components/MyProjects";
 import Skill from "./components/Skill";
 import ContactMe from "./components/ContactMe";
-import Navigation from "../layouts/components/Navigation";
-
+import { useSelector, useDispatch } from "react-redux";
 const Home = () => {
   const [currentColor, setCurrentColor] = useState(getRandomColor);
   const words = ["interest", "enjoy", "excitement", "passion"];
   const [text, setText] = useState(words[0]);
-
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentColor(getRandomColor());
@@ -37,7 +37,7 @@ const Home = () => {
     return () => clearTimeout(timeoutId);
   }, [text, words]);
   return (
-    <div className="container mx-auto 2xl:w-5/6 pt-[8rem] ">
+    <div className="container mx-auto 2xl:w-5/6 pt-[8rem] h-[10000px]">
       <h1 className="text-[4rem] font-bold font-serif ">
         Hello ✌🏼,
         <br />
@@ -58,19 +58,35 @@ const Home = () => {
         title="About me"
         style={{
           background: currentColor,
-          transition: "color 2s ease",
+          transition: "background 2s ease",
           color: "#ffff",
         }}
         className="p-2 mt-[3rem] px-4 rounded-[24px] shadow-lg mb-[6rem]"
       >
         About me
       </button>
-      <Navigation />
 
       <AboutMe />
       <Skill />
       <MyProjects />
       <ContactMe />
+      {/* <div>
+        <div>
+          <button
+            aria-label="Increment value"
+            onClick={() => dispatch(increment())}
+          >
+            Increment
+          </button>
+          <span>{count}</span>
+          <button
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}
+          >
+            Decrement
+          </button>
+        </div>
+      </div> */}
     </div>
   );
 };
