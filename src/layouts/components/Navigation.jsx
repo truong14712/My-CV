@@ -1,12 +1,28 @@
+import { Link, useLocation } from "react-router-dom";
+import TabNavigation from "../../components/TabNavigation";
 const Navigation = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
   return (
-    <div className="mt-[4rem]">
-      <ul className="right-[38%] fixed flex items-center text-center bg-white border drop-shadow-lg rounded-[24px] px-4 cursor-pointer p-2 opacity-100 z-10">
-        <li className="px-4 p-2 rounded-[20px]">Home</li>
-        <li className="px-4 p-2 rounded-[24px]">Project</li>
-        <li className="px-4 p-2 rounded-[24px]">Resume</li>
-        <li className="px-4 p-2 rounded-[24px]">Github</li>
-      </ul>
+    <div className="relative">
+      <div className="fixed transform -translate-x-1/2 bottom-5 2xl:w-1/6 left-1/2">
+        <ul className="flex items-center bg-white border drop-shadow-lg rounded-[20px] px-4 cursor-pointer opacity-95 z-10 justify-center py-2">
+          {TabNavigation.map((item, index) => {
+            return (
+              <li
+                key={index}
+                className={currentPath == item.path && "text-red-500"}
+                title={item.title}
+                style={{
+                  padding: "0 20px",
+                }}
+              >
+                <Link to={item.path}>{item.icon}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
