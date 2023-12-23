@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="fixed z-10 w-full p-1 text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95">
-        <div className="flex items-center justify-between mx-[120px]">
+        <div className="flex items-center justify-between mx-[240px]">
           <img src={logo} alt="mintrudev" className="w-[50px]" />
           <div>
             <MaterialUISwitch checked={checked} onChange={handleChange} />
