@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import TabNavigation from "../../components/TabNavigation";
+import TabNavigation from "../../../components/TabNavigation";
 const Navigation = () => {
   const location = useLocation();
   const currentPath = location.pathname;

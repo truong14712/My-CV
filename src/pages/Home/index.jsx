@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import AboutMe from "./components/AboutMe";
-import MyProjects from "./components/MyProjects";
-import Skill from "./components/Skill";
-import ContactMe from "./components/ContactMe";
+import AboutMe from "../components/AboutMe";
+import MyProjects from "../components/MyProjects";
+import Skill from "../components/Skill";
+import ContactMe from "../components/ContactMe";
 import { useSelector, useDispatch } from "react-redux";
 const Home = () => {
   const [currentColor, setCurrentColor] = useState(getRandomColor);
