@@ -57,8 +57,8 @@ const Navbar = () => {
   };
   return (
     <div>
-      <nav className="fixed z-10 w-full p-1 text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95">
-        <div className="flex items-center justify-between mx-[240px] p-2">
+      <nav className="fixed z-10 mx-auto p-1 text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 w-full">
+        <div className="flex items-center justify-between mx-[200px] p-2">
           <img
             src={logo}
             alt="mintrudev"
