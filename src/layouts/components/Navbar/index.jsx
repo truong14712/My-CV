@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/T.svg";
+import logo from "../../../assets/kisspng-computer-icons-font-letter-t-5ae958426f2ea3.6394530715252419224554.png";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/system";
 const Navbar = () => {
@@ -58,8 +58,12 @@ const Navbar = () => {
   return (
     <div>
       <nav className="fixed z-10 w-full p-1 text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95">
-        <div className="flex items-center justify-between mx-[240px]">
-          <img src={logo} alt="mintrudev" className="w-[50px]" />
+        <div className="flex items-center justify-between mx-[240px] p-2">
+          <img
+            src={logo}
+            alt="mintrudev"
+            className="w-[40px] animate-bounce	duration-300"
+          />
           <div>
             <MaterialUISwitch checked={checked} onChange={handleChange} />
           </div>
