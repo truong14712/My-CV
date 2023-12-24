@@ -1,17 +1,60 @@
+import { selectCurrentColor } from "../../../providers/features/colorSlice";
+import { useSelector } from "react-redux";
+
 const AboutMe = () => {
+  const currentColor = useSelector(selectCurrentColor);
+
   return (
-    <div className="pt-[60px] mt-[20%]">
-      <div className="text-2xl font-semibold text-center">About me</div>
+    <div className="pt-[70px] mt-[10%]">
+      <div
+        className="text-2xl font-semibold text-center"
+        style={{
+          color: currentColor,
+          transition: "color 2s ease",
+        }}
+      >
+        About me
+      </div>
       <div className="mt-1 text-xl text-center">
         if you&apos;re <span className="italic font-semibold">wondering</span>{" "}
         who <span className="italic font-semibold">I am...</span>
       </div>
-      <div className="mt-[24px]">
-        <div className="text-lg">
-          Hi, my name is <span>Truong</span>, i&apos;m 21 years old. I got a
-          college degree at FPT Polytechnic College in Hanoi (2021-2023).
-          Besides, i am really passionate about <span>Javascript</span> and
-          <span> Web Development</span>.
+      <div className="mt-[24px] ">
+        <div className="text-lg ">
+          Hi, my name is{" "}
+          <span
+            className="italic px-2"
+            style={{
+              background: currentColor,
+              color: "#ffff",
+              transition: "background 2s ease",
+            }}
+          >
+            Truong
+          </span>
+          , i&apos;m 21 years old. I got a college degree at FPT Polytechnic
+          College in Hanoi (2021-2023). Besides, i am really passionate about{" "}
+          <span
+            className="italic px-2"
+            style={{
+              background: currentColor,
+              color: "#ffff",
+              transition: "background 2s ease",
+            }}
+          >
+            Javascript
+          </span>{" "}
+          and{" "}
+          <span
+            className="italic px-2"
+            style={{
+              background: currentColor,
+              color: "#ffff",
+              transition: "background 2s ease",
+            }}
+          >
+            Web Development.
+          </span>
         </div>
         <br />
         <div className="text-lg">

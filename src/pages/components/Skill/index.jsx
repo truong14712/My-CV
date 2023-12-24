@@ -1,9 +1,34 @@
+import { selectCurrentColor } from "../../../providers/features/colorSlice";
+import { useSelector } from "react-redux";
 const Skill = () => {
+  const currentColor = useSelector(selectCurrentColor);
+
   return (
     <div className="">
       <div className="mt-[30px] font-semibold text-2xl text-center">
-        My current <span className="italic">stack</span> of{" "}
-        <span className="italic">languages/technologies </span>is:
+        My current{" "}
+        <span
+          className="italic px-1"
+          style={{
+            background: currentColor,
+            color: "#ffff",
+            transition: "background 2s ease",
+          }}
+        >
+          stack
+        </span>{" "}
+        of{" "}
+        <span
+          className="italic px-1"
+          style={{
+            background: currentColor,
+            color: "#ffff",
+            transition: "background 2s ease",
+          }}
+        >
+          languages/technologies{" "}
+        </span>
+        is:
       </div>
       <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]">
         <img

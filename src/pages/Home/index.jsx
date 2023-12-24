@@ -4,29 +4,19 @@ import MyProjects from "../components/MyProjects";
 import Skill from "../components/Skill";
 import ContactMe from "../components/ContactMe";
 import { useSelector, useDispatch } from "react-redux";
+import { selectCurrentColor } from "../../providers/features/colorSlice";
+import { updateColorAsync } from "../../providers/api/colorThunk";
 const Home = () => {
-  const [currentColor, setCurrentColor] = useState(getRandomColor);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
   const [text, setText] = useState(words[0]);
-  const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
+  const currentColor = useSelector(selectCurrentColor);
+
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentColor(getRandomColor());
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  function getRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+    // Dispatch the initial color update
+    dispatch(updateColorAsync());
+  }, [dispatch]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -47,7 +37,7 @@ const Home = () => {
   };
   return (
     <div className="bg-gray-50">
-      <div className="container mx-auto 2xl:w-4/6 pt-[8rem] min-h-[100dvh]">
+      <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh]">
         <h1 className="text-[4rem] font-bold">
           Hello ✌🏼,
           <br />
