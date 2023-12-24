@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import counterSlice from "./features/counterSlice";
+import colorReducer from "./features/colorSlice";
 
 const rootReducer = combineReducers({
-  [counterSlice.name]: counterSlice.reducer,
+  color: colorReducer,
 });
 
 export default rootReducer;
