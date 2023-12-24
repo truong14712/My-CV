@@ -35,11 +35,13 @@ const Home = () => {
     // Cuộn đến component "AboutMe"
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  
   return (
     <div className="bg-gray-50">
       <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh]">
         <h1 className="text-[4rem] font-bold">
-          Hello ✌🏼,
+          Hello <span>✌🏼</span>
+          ,
           <br />
           I&apos;m{" "}
           <span

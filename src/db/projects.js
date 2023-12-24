@@ -1,35 +1,29 @@
+import generateRandomId from "../utils/generateRandomId";
+
 const projects = [
   {
-    id: 1,
-    title: "UnNote",
-    description: "Share code with your friends no database, no login",
-    skill: "HTML, CSS, Javascript, Service Worker",
+    id: generateRandomId(),
+    title: "Shop book online FE",
+    description: "Sell books online",
+    technology: "HTML, CSS, Javascript, Angular, Angular material",
     img: "https://picsum.photos/200/300",
-    url: "https://github.com/truong14712",
+    url: "https://github.com/truong14712/books.fe",
   },
   {
-    id: 2,
-    title: "Share code with your friends no database, no login",
-    description: "Share code with your friends no database, no login",
-    skill: "HTML, CSS, Javascript, Service Worker",
+    id: generateRandomId(),
+    title: "Shop book online BE",
+    description: "Sell books online",
+    technology: "Nodejs, Mongodb, Express",
     img: "https://picsum.photos/200/300",
-    url: "https://github.com/truong14712",
+    url: "https://github.com/truong14712/books.be",
   },
   {
-    id: 2,
-    title: "Share code with your friends no database, no login",
-    description: "Share code with your friends no database, no login",
-    skill: "HTML, CSS, Javascript, Service Worker",
+    id: generateRandomId(),
+    title: "Website job search JobHunters",
+    description: "...",
+    technology: "HTML, CSS, Javascript, React, Redux",
     img: "https://picsum.photos/200/300",
-    url: "https://github.com/truong14712",
-  },
-  {
-    id: 2,
-    title: "Share code with your friends no database, no login lorem",
-    description: "Share code with your friends no database, no login",
-    skill: "HTML, CSS, Javascript, Service Worker",
-    img: "https://picsum.photos/200/300",
-    url: "https://github.com/truong14712",
+    url: "https://github.com/nhatminh6112003/ITJOBS-FRONTEND",
   },
 ];
 export default projects;
