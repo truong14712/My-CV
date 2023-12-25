@@ -25,9 +25,23 @@ const Home = () => {
       const nextIndex = (currentIndex + 1) % words.length;
       setText(words[nextIndex]);
     }, 2000);
-
     return () => clearTimeout(timeoutId);
   }, [text, words]);
+  useEffect(() => {
+    console.log("%cStop!", "color: red; font-size: 50px; font-weight: bold;");
+    console.log(
+      "%cThis is a browser feature intended for developers.",
+      " font-size: 28px;"
+    );
+    // console.log(
+    //   "%cHello everyone! I am a frontend developer from Vietnam.",
+    //   "color: blue; font-size: 24px;"
+    // );
+    // console.log(
+    //   "%cMy Github: https://github.com/truong14712",
+    //   "color: orange; font-size: 20px;"
+    // );
+  }, []);
   // Tạo một tham chiếu cho component "AboutMe"
   const aboutMeRef = useRef(null);
 
@@ -36,13 +50,12 @@ const Home = () => {
     // Cuộn đến component "AboutMe"
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
-
   return (
     <div className={"bg-gray-50"}>
       <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh] ">
-        <div className="flex items-center justify-between">
-          <div className="sm:p-5">
-            <h1 className="text-[4rem] font-bold sm:text-[7rem] ">
+        <div className="flex items-center justify-between md:p-5">
+          <div className="sm:p-5 md:p-5">
+            <h1 className="text-[4rem] font-bold sm:text-[5rem] ">
               Hello <span>👋🏻</span>
               ,
               <br />
@@ -86,7 +99,7 @@ const Home = () => {
         <Skill />
         <MyProjects />
         <ContactMe />
-        <div className="my-[3rem] flex items-center justify-center">
+        <div className="py-[3rem] flex items-center justify-center">
           <i
             className="fa-solid fa-t text-[70px]"
             title="mintrudev"

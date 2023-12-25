@@ -30,7 +30,7 @@ const Skill = () => {
         </span>
         is:
       </div>
-      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px] sm:w-[630px] sm:p-2">
+      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[480px] md:w-[720px]">
         <img
           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"
           alt="html5"

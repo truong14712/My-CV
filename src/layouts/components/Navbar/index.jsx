@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="fixed z-10 w-full p-1 mx-auto text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 ">
-        <div className="flex items-center justify-between mx-[200px] p-2 sm:justify-between sm:mx-auto">
+        <div className="flex items-center justify-between mx-[200px] p-2  sm:mx-auto md:mx-auto">
           <i
             className="fa-solid fa-t text-[40px]"
             title="mintrudev"
