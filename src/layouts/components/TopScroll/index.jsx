@@ -46,7 +46,7 @@ const TopScroll = () => {
               color: "#ffff",
             }}
           >
-            <i className="fa-solid fa-angle-up w-full p-2"></i>
+            <i className="w-full p-2 fa-solid fa-angle-up"></i>
           </button>
         )}
       </div>
