@@ -22,7 +22,6 @@ const Navigation = () => {
                   padding: "4px 20px",
                   borderRadius: "16px",
                   color: currentPath == item.path ? "#fff" : "#000",
-                  display: "flex",
                 }}
                 to={item.path}
               >

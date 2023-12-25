@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../providers/features/colorSlice";
 import { updateColorAsync } from "../../providers/api/colorThunk";
 import logo from "../../assets/kisspng-computer-icons-font-letter-t-5ae958426f2ea3.6394530715252419224554.png";
+import Signature from "../components/Signature";
 const Home = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
@@ -66,7 +67,7 @@ const Home = () => {
                   transition: "color 2s ease",
                 }}
               >
-                Truong
+                Minh Truong
               </span>
             </h1>
             <p className="text-[1.3rem] space-x-2 mt-2">
@@ -99,16 +100,7 @@ const Home = () => {
         <Skill />
         <MyProjects />
         <ContactMe />
-        <div className="py-[3rem] flex items-center justify-center">
-          <i
-            className="fa-solid fa-t text-[70px]"
-            title="mintrudev"
-            style={{
-              color: currentColor,
-              transition: "color 2s ease",
-            }}
-          ></i>
-        </div>
+        <Signature />
       </div>
     </div>
   );

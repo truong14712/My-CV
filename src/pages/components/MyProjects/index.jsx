@@ -47,14 +47,7 @@ const MyProjects = () => {
                   </div>
                   <div className="flex items-center justify-center">
                     <Link to={project.url} className="flex items-center">
-                      <button
-                        className="border px-5 py-[2px] rounded-2xl  shadow"
-                        style={{
-                          background: currentColor,
-                          transition: "background 2s ease",
-                          color: "#ffff",
-                        }}
-                      >
+                      <button className="border px-5 py-[2px] rounded-2xl  shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white">
                         <i className="fa-brands fa-github"></i>
                         <span className="ml-2">Source</span>
                       </button>
