@@ -55,6 +55,7 @@ const Navbar = () => {
   }));
 
   const handleChange = () => {
+    console.log("checked", checked);
     setChecked((prev) => !prev);
   };
   return (
