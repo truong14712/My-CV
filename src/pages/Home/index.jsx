@@ -6,6 +6,7 @@ import ContactMe from "../components/ContactMe";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../providers/features/colorSlice";
 import { updateColorAsync } from "../../providers/api/colorThunk";
+import style from "./home.module.css";
 const Home = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
@@ -35,10 +36,10 @@ const Home = () => {
     // Cuộn đến component "AboutMe"
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  
+
   return (
-    <div className="bg-gray-50">
-      <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh]">
+    <div className={("bg-gray-50", style.custom_scrollbar)}>
+      <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh] ">
         <h1 className="text-[4rem] font-bold">
           Hello <span>✌🏼</span>
           ,
