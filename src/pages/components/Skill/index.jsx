@@ -8,7 +8,7 @@ const Skill = () => {
       <div className="mt-[30px] font-semibold text-2xl text-center">
         My current{" "}
         <span
-          className="italic px-1"
+          className="px-1 italic"
           style={{
             background: currentColor,
             color: "#ffff",
@@ -19,7 +19,7 @@ const Skill = () => {
         </span>{" "}
         of{" "}
         <span
-          className="italic px-1"
+          className="px-1 italic"
           style={{
             background: currentColor,
             color: "#ffff",
@@ -30,7 +30,7 @@ const Skill = () => {
         </span>
         is:
       </div>
-      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]">
+      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px] sm:w-[630px] sm:p-2">
         <img
           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"
           alt="html5"

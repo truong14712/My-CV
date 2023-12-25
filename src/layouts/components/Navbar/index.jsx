@@ -1,9 +1,11 @@
 import { useState } from "react";
-import logo from "../../../assets/kisspng-computer-icons-font-letter-t-5ae958426f2ea3.6394530715252419224554.png";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/system";
+import { useSelector } from "react-redux";
+import { selectCurrentColor } from "../../../providers/features/colorSlice.js";
 const Navbar = () => {
   const [checked, setChecked] = useState(true);
+  const currentColor = useSelector(selectCurrentColor);
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -57,13 +59,16 @@ const Navbar = () => {
   };
   return (
     <div>
-      <nav className="fixed z-10 mx-auto p-1 text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 w-full">
-        <div className="flex items-center justify-between mx-[200px] p-2">
-          <img
-            src={logo}
-            alt="mintrudev"
-            className="w-[40px] animate-bounce	duration-300"
-          />
+      <nav className="fixed z-10 w-full p-1 mx-auto text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 ">
+        <div className="flex items-center justify-between mx-[200px] p-2 sm:justify-between sm:mx-auto">
+          <i
+            className="fa-solid fa-t text-[40px]"
+            title="mintrudev"
+            style={{
+              color: currentColor,
+              transition: "color 2s ease",
+            }}
+          ></i>
           <div>
             <MaterialUISwitch checked={checked} onChange={handleChange} />
           </div>

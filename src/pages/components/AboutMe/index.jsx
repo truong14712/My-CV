@@ -20,10 +20,10 @@ const AboutMe = () => {
         who <span className="italic font-semibold">I am...</span>
       </div>
       <div className="mt-[24px] ">
-        <div className="text-lg ">
+        <div className="text-lg sm:p-2">
           Hi, my name is{" "}
           <span
-            className="italic px-2"
+            className="px-2 italic"
             style={{
               background: currentColor,
               color: "#ffff",
@@ -35,7 +35,7 @@ const AboutMe = () => {
           , i&apos;m 21 years old. I got a college degree at FPT Polytechnic
           College in Hanoi (2021-2023). Besides, i am really passionate about{" "}
           <span
-            className="italic px-2"
+            className="px-2 italic"
             style={{
               background: currentColor,
               color: "#ffff",
@@ -46,7 +46,7 @@ const AboutMe = () => {
           </span>{" "}
           and{" "}
           <span
-            className="italic px-2"
+            className="px-2 italic"
             style={{
               background: currentColor,
               color: "#ffff",
@@ -57,7 +57,7 @@ const AboutMe = () => {
           </span>
         </div>
         <br />
-        <div className="text-lg">
+        <div className="text-lg sm:p-2">
           I started learning web programming in 2021. Before that, I had a
           background in C / C ++ programming so getting access to javascript is
           not difficult. I have been in love with javascript since I did not
@@ -70,7 +70,7 @@ const AboutMe = () => {
           ....
         </div>
         <br />
-        <div className="text-lg">
+        <div className="text-lg sm:p-2">
           I want to be a good person in the field that I have chosen so I tried
           a lot, worked hard.
         </div>
