@@ -20,7 +20,7 @@ const AboutMe = () => {
         who <span className="italic font-semibold">I am...</span>
       </div>
       <div className="mt-[24px] ">
-        <div className="text-lg sm:p-2">
+        <div className="text-lg sm:p-2 md:p-5">
           Hi, my name is{" "}
           <span
             className="px-2 italic"
@@ -57,7 +57,7 @@ const AboutMe = () => {
           </span>
         </div>
         <br />
-        <div className="text-lg sm:p-2">
+        <div className="text-lg sm:p-2 md:p-5">
           I started learning web programming in 2021. Before that, I had a
           background in C / C ++ programming so getting access to javascript is
           not difficult. I have been in love with javascript since I did not
@@ -70,7 +70,7 @@ const AboutMe = () => {
           ....
         </div>
         <br />
-        <div className="text-lg sm:p-2">
+        <div className="text-lg sm:p-2 md:p-5">
           I want to be a good person in the field that I have chosen so I tried
           a lot, worked hard.
         </div>

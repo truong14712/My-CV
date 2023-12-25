@@ -7,7 +7,7 @@ const MyProjects = () => {
   const currentColor = useSelector(selectCurrentColor);
 
   return (
-    <div className="my-[25px] py-[25px] sm:p-3">
+    <div className="my-[25px] py-[25px] sm:p-3 md:p-3">
       <div
         className="text-2xl font-semibold text-center mb-[40px]"
         style={{
@@ -17,7 +17,7 @@ const MyProjects = () => {
       >
         My Projects
       </div>
-      <div className="grid grid-cols-3 gap-10 sm:grid-cols-2">
+      <div className="grid grid-cols-3 gap-10 sm:grid-cols-2 md:grid-cols-2">
         {projects.map((project) => {
           return (
             <>

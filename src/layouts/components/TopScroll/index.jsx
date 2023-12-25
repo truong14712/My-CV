@@ -38,7 +38,7 @@ const TopScroll = () => {
       <div className="relative">
         {showButton && (
           <button
-            className="fixed bottom-[24px] right-[34px]  rounded-[50%] "
+            className="fixed bottom-[24px] right-[34px]  rounded-[50%] sm:bottom-[12%] sm:right-0 md:bottom-[10%] md:right-0"
             onClick={scrollToTop}
             style={{
               background: currentColor,
