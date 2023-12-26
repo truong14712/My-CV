@@ -96,7 +96,7 @@ const ContactMe = () => {
           </li>
           <li className="flex items-center">
             <a
-              href={"https://github.com/truongnguyenngoc"}
+              href={"https://mintrudev-contact.vercel.app/"}
               target={"_blank"}
               className={
                 checked

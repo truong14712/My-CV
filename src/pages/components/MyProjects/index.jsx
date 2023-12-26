@@ -19,7 +19,7 @@ const MyProjects = () => {
       >
         My Projects
       </div>
-      <div className="grid grid-cols-3 gap-10 sm:grid-cols-2 md:grid-cols-2">
+      <div className="grid grid-cols-3 gap-10 sm:grid-cols-2 md:grid-cols-2 sm:gap-5">
         {projects.map((project) => {
           return (
             <>
@@ -34,7 +34,7 @@ const MyProjects = () => {
                 <img
                   src={`${project.img}`}
                   alt="1"
-                  className="w-[360px] h-[200px] bg-cover "
+                  className="w-[360px] h-[200px] bg-cover rounded-lg"
                 />
                 <div className="p-4 text-center">
                   <div className="text-lg mb-[30px]">
