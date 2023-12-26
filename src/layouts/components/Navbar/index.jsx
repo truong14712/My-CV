@@ -1,11 +1,16 @@
 import { useState } from "react";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/system";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../../providers/features/colorSlice.js";
+import {
+  selectTheme,
+  toggleTheme,
+} from "../../../providers/features/themeSlice.js";
 const Navbar = () => {
-  const [checked, setChecked] = useState(true);
+  const checked = useSelector(selectTheme);
   const currentColor = useSelector(selectCurrentColor);
+  const dispatch = useDispatch();
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -33,7 +38,7 @@ const Navbar = () => {
       backgroundColor: theme.palette.mode === "dark" ? "#003892" : "#001e3c",
       width: 32,
       height: 32,
-      "&:before": {
+      "&::before": {
         content: "''",
         position: "absolute",
         width: "100%",
@@ -55,12 +60,17 @@ const Navbar = () => {
   }));
 
   const handleChange = () => {
-    console.log("checked", checked);
-    setChecked((prev) => !prev);
+    dispatch(toggleTheme());
   };
   return (
     <div>
-      <nav className="fixed z-10 w-full p-1 mx-auto text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 ">
+      <nav
+        className={
+          checked
+            ? "fixed z-10 w-full p-1 mx-auto text-gray-700 bg-white border-b border-gray-200 shadow-lg opacity-95 transition-all"
+            : "fixed z-10 w-full p-1 mx-auto bg-black shadow-2xl opacity-95 transition-all border-gray-50 border-b"
+        }
+      >
         <div className="flex items-center justify-between mx-[200px] p-2  sm:mx-auto md:mx-auto">
           <i
             className="fa-solid fa-t text-[40px]"

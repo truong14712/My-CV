@@ -6,14 +6,17 @@ import ContactMe from "../components/ContactMe";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../providers/features/colorSlice";
 import { updateColorAsync } from "../../providers/api/colorThunk";
-import logo from "../../assets/kisspng-computer-icons-font-letter-t-5ae958426f2ea3.6394530715252419224554.png";
+
 import Signature from "../components/Signature";
+import { selectTheme } from "../../providers/features/themeSlice";
+import style from "./home.module.css";
 const Home = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
   const [text, setText] = useState(words[0]);
   const dispatch = useDispatch();
   const currentColor = useSelector(selectCurrentColor);
+  const checked = useSelector(selectTheme);
 
   useEffect(() => {
     // Dispatch the initial color update
@@ -52,11 +55,23 @@ const Home = () => {
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className={"bg-gray-50"}>
+    <div
+      className={
+        checked
+          ? "bg-gray-50 transition-all ease-linear duration-300"
+          : "bg-black transition-all ease-linear duration-300"
+      }
+    >
       <div className="container mx-auto 2xl:w-[75%] pt-[8rem] min-h-[100dvh] ">
-        <div className="flex items-center justify-between md:p-5">
+        <div className="flex items-center justify-between md:p-5 ">
           <div className="sm:p-5 md:p-5">
-            <h1 className="text-[4rem] font-bold sm:text-[5rem] ">
+            <h1
+              className={
+                checked
+                  ? "text-[4rem] font-bold sm:text-[5rem]"
+                  : "text-[4rem] font-bold sm:text-[5rem] text-white"
+              }
+            >
               Hello <span>👋🏻</span>
               ,
               <br />
@@ -70,7 +85,13 @@ const Home = () => {
                 Minh Truong
               </span>
             </h1>
-            <p className="text-[1.3rem] space-x-2 mt-2">
+            <p
+              className={
+                checked
+                  ? "text-[1.3rem] space-x-2 mt-2"
+                  : "text-[1.3rem] space-x-2 mt-2 text-white"
+              }
+            >
               A <span className="italic font-bold ">{text}</span> Front-end
               developer
             </p>
@@ -87,12 +108,14 @@ const Home = () => {
               About me
             </button>
           </div>
-          <img
-            src={logo}
-            alt="mintrudev"
-            className="w-[330px] sm:hidden"
+          <i
+            className="fa-solid fa-t text-[330px] sm:hidden"
             title="mintrudev"
-          />
+            style={{
+              color: currentColor,
+              transition: "color 2s ease",
+            }}
+          ></i>
         </div>
         <div ref={aboutMeRef}>
           <AboutMe />

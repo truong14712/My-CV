@@ -2,9 +2,11 @@ import projects from "../../../db/projects";
 import { Link } from "react-router-dom";
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/features/themeSlice";
 
 const MyProjects = () => {
   const currentColor = useSelector(selectCurrentColor);
+  const checked = useSelector(selectTheme);
 
   return (
     <div className="my-[25px] py-[25px] sm:p-3 md:p-3">
@@ -21,7 +23,14 @@ const MyProjects = () => {
         {projects.map((project) => {
           return (
             <>
-              <div className="bg-white border rounded-lg" key={project?.id}>
+              <div
+                className={
+                  checked
+                    ? "bg-white border rounded-lg"
+                    : "bg-black border rounded-lg text-white"
+                }
+                key={project?.id}
+              >
                 <img
                   src={`${project.img}`}
                   alt="1"
@@ -41,8 +50,18 @@ const MyProjects = () => {
                       {project.title}
                     </span>
                   </div>
-                  <div className="mb-[20px]">{project.description}</div>
-                  <div className="mb-[26px] font-bold text-[14px] text-[#0f0e17]">
+                  <div
+                    className={checked ? "mb-[20px]" : "mb-[20px] text-white"}
+                  >
+                    {project.description}
+                  </div>
+                  <div
+                    className={
+                      checked
+                        ? "mb-[26px] font-bold text-[14px] text-[#0f0e17]"
+                        : "mb-[26px] font-bold text-[14px]  text-white"
+                    }
+                  >
                     {project.technology}
                   </div>
                   <div className="flex items-center justify-center">
