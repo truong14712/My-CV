@@ -31,14 +31,14 @@ const AboutMe = () => {
         <div className="text-lg sm:p-2 md:p-5">
           Hi, my name is{" "}
           <span
-            className="px-2 italic"
+            className="px-1 italic"
             style={{
               background: currentColor,
               color: "#ffff",
               transition: "background 2s ease",
             }}
           >
-            Truong
+            Minh Truong
           </span>
           , i&apos;m 21 years old. I got a college degree at FPT Polytechnic
           College in Hanoi (2021-2023). Besides, i am really passionate about{" "}

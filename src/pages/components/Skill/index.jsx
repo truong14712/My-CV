@@ -38,7 +38,7 @@ const Skill = () => {
         </span>
         is:
       </div>
-      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[465px] md:w-[720px]">
+      <div className="flex flex-wrap items-center justify-center 2xl:w-[860px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[465px] md:w-[720px]">
         <img
           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"
           alt="html5"
@@ -65,7 +65,7 @@ const Skill = () => {
           title="Reactjs"
         />
         <img
-          src="https://img.shields.io/badge/Nextjs-black?style=flat-square&logo=next.js&logoColor=white"
+          src="https://img.shields.io/badge/Nextjs-%2320232a.svg?style=flat-square&logo=next.js&logoColor=white"
           alt="Nextjs"
           title="Nextjs"
         />
@@ -115,7 +115,9 @@ const Skill = () => {
           title="ReactRouter"
         />
         <img
-          src="https://img.shields.io/badge/Npm-black?style=flat-square&logo=Npm&logoColor=white"
+          src={
+            "https://img.shields.io/badge/Npm-%2320232a.svg?style=flat-square&logo=Npm&logoColor=red"
+          }
           alt="Npm"
           title="Npm"
         />
