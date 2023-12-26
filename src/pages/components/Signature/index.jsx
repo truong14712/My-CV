@@ -7,7 +7,7 @@ const Signature = () => {
   return (
     <div>
       <div
-        className="pb-[3rem] flex items-center justify-between text-[5.5rem] uppercase font-mono space-y-2"
+        className="pb-[3rem] flex items-center justify-between text-[5.5rem] uppercase font-mono space-y-2 sm:p-2"
         style={{
           color: currentColor,
           transition: "color 2s ease",

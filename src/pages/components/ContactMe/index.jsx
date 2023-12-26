@@ -1,7 +1,9 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/features/themeSlice";
 const ContactMe = () => {
   const currentColor = useSelector(selectCurrentColor);
+  const checked = useSelector(selectTheme);
 
   return (
     <div className="my-[25px] py-[25px]">
@@ -20,7 +22,11 @@ const ContactMe = () => {
             <a
               href={"https://github.com/truong14712"}
               target={"_blank"}
-              className={`p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`}
+              className={
+                checked
+                  ? `p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`
+                  : "p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white text-white"
+              }
               rel="noreferrer"
               aria-label="Link Social"
               style={{
@@ -35,7 +41,11 @@ const ContactMe = () => {
             <a
               href={"https://www.linkedin.com/in/mintrudev/"}
               target={"_blank"}
-              className={`p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`}
+              className={
+                checked
+                  ? `p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`
+                  : "p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white text-white"
+              }
               rel="noreferrer"
               aria-label="Link Social"
               style={{
@@ -50,7 +60,11 @@ const ContactMe = () => {
             <a
               href={"https://www.facebook.com/mintru.03"}
               target={"_blank"}
-              className={`p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`}
+              className={
+                checked
+                  ? `p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`
+                  : "p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white text-white"
+              }
               rel="noreferrer"
               aria-label="Link Social"
               style={{
@@ -65,7 +79,11 @@ const ContactMe = () => {
             <a
               href={"https://www.instagram.com/mintru_03"}
               target={"_blank"}
-              className={`p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`}
+              className={
+                checked
+                  ? `p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`
+                  : "p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white text-white"
+              }
               rel="noreferrer"
               aria-label="Link Social"
               style={{
@@ -80,7 +98,11 @@ const ContactMe = () => {
             <a
               href={"https://github.com/truongnguyenngoc"}
               target={"_blank"}
-              className={`p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`}
+              className={
+                checked
+                  ? `p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white`
+                  : "p-3 border rounded-[100%] mx-2 grid hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:text-white text-white"
+              }
               rel="noreferrer"
               aria-label="Link Social"
               style={{

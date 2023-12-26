@@ -1,8 +1,10 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/features/themeSlice";
 
 const AboutMe = () => {
   const currentColor = useSelector(selectCurrentColor);
+  const checked = useSelector(selectTheme);
 
   return (
     <div className="pt-[70px] mt-[10%]">
@@ -15,11 +17,17 @@ const AboutMe = () => {
       >
         About me
       </div>
-      <div className="mt-1 text-xl text-center">
+      <div
+        className={
+          checked
+            ? "mt-1 text-xl text-center"
+            : "mt-1 text-xl text-center text-white"
+        }
+      >
         if you&apos;re <span className="italic font-semibold">wondering</span>{" "}
         who <span className="italic font-semibold">I am...</span>
       </div>
-      <div className="mt-[24px] ">
+      <div className={checked ? "mt-[24px]" : "mt-[24px] text-white"}>
         <div className="text-lg sm:p-2 md:p-5">
           Hi, my name is{" "}
           <span

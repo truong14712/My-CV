@@ -1,11 +1,19 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/features/themeSlice";
 const Skill = () => {
   const currentColor = useSelector(selectCurrentColor);
+  const checked = useSelector(selectTheme);
 
   return (
     <div className="">
-      <div className="mt-[30px] font-semibold text-2xl text-center">
+      <div
+        className={
+          checked
+            ? "mt-[30px] font-semibold text-2xl text-center"
+            : "mt-[30px] font-semibold text-2xl text-center text-white"
+        }
+      >
         My current{" "}
         <span
           className="px-1 italic"
@@ -30,7 +38,7 @@ const Skill = () => {
         </span>
         is:
       </div>
-      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[480px] md:w-[720px]">
+      <div className="flex flex-wrap items-center justify-center w-[768px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[465px] md:w-[720px]">
         <img
           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"
           alt="html5"
