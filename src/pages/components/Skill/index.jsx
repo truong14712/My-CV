@@ -38,7 +38,7 @@ const Skill = () => {
         </span>
         is:
       </div>
-      <div className="flex flex-wrap items-center justify-center 2xl:w-[860px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[465px] md:w-[720px]">
+      <div className="flex flex-wrap items-center justify-center 2xl:w-[860px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[380px] md:w-[720px]">
         <img
           src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white"
           alt="html5"
@@ -131,11 +131,11 @@ const Skill = () => {
           alt="Trello"
           title="Trello"
         />
-        {/* <img
+        <img
           src="https://img.shields.io/badge/Nestjs-red?style=flat-square&logo=Nestjs&logoColor=white"
           alt="Nestjs"
           title="Nestjs"
-        /> */}
+        />
         <img
           src="https://img.shields.io/badge/Eslint-red?style=flat-square&logo=Eslint&logoColor=white"
           alt="Eslint"
