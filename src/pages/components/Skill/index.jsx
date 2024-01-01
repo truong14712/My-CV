@@ -10,8 +10,8 @@ const Skill = () => {
       <div
         className={
           checked
-            ? "mt-[30px] font-semibold text-2xl text-center"
-            : "mt-[30px] font-semibold text-2xl text-center text-white"
+            ? "mt-[30px] font-semibold text-3xl text-center mb-2"
+            : "mt-[30px] font-semibold text-3xl text-center text-white mb-2"
         }
       >
         My current{" "}

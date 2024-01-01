@@ -9,7 +9,7 @@ const AboutMe = () => {
   return (
     <div className="pt-[70px] mt-[10%]">
       <div
-        className="text-2xl font-semibold text-center"
+        className="text-3xl font-semibold text-center"
         style={{
           color: currentColor,
           transition: "color 2s ease",
