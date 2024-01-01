@@ -3,14 +3,13 @@ import AboutMe from "../components/AboutMe";
 import MyProjects from "../components/MyProjects";
 import Skill from "../components/Skill";
 import ContactMe from "../components/ContactMe";
+import Education from "../components/Education";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../providers/features/colorSlice";
 import { updateColorAsync } from "../../providers/api/colorThunk";
 
 import Signature from "../components/Signature";
 import { selectTheme } from "../../providers/features/themeSlice";
-import style from "./home.module.css";
-import Education from "../components/Education";
 const Home = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
