@@ -7,7 +7,7 @@ const Signature = () => {
   const checked = useSelector(selectTheme);
 
   return (
-    <div>
+    <footer>
       <div
         className="flex items-center justify-between text-[5.5rem] uppercase font-mono space-y-2 sm:p-2 leading-10 mt-[3rem] sm:text-[2.5rem] md:p-2"
         style={{
@@ -38,7 +38,7 @@ const Signature = () => {
         <div className="sm:hidden">#BACKEND</div>
         <div className="sm:hidden md:hidden">#DEVELOPER</div>
       </div>
-    </div>
+    </footer>
   );
 };
 

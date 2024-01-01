@@ -8,7 +8,7 @@ const ContactMe = () => {
   return (
     <div className="my-[25px] py-[25px]">
       <div
-        className="text-2xl font-semibold text-center"
+        className="text-3xl font-semibold text-center"
         style={{
           color: currentColor,
           transition: "color 2s ease",

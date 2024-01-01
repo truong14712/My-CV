@@ -10,6 +10,7 @@ import { updateColorAsync } from "../../providers/api/colorThunk";
 import Signature from "../components/Signature";
 import { selectTheme } from "../../providers/features/themeSlice";
 import style from "./home.module.css";
+import Education from "../components/Education";
 const Home = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
@@ -55,7 +56,7 @@ const Home = () => {
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div
+    <main
       className={
         checked
           ? "bg-gray-50 transition-all ease-linear duration-300"
@@ -120,12 +121,13 @@ const Home = () => {
         <div ref={aboutMeRef}>
           <AboutMe />
         </div>
+        <Education />
         <Skill />
         <MyProjects />
         <ContactMe />
         <Signature />
       </div>
-    </div>
+    </main>
   );
 };
 

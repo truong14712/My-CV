@@ -9,7 +9,7 @@ const Navigation = () => {
   const checked = useSelector(selectTheme);
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <div
         className={
           "fixed -translate-x-1/2 bottom-5 2xl:w-[300px] left-1/2 flex items-center bg-white bg-opacity-60 backdrop-blur-lg rounded-[16px] shadow-lg sm: w-full "
