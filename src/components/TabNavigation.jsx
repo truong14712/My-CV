@@ -4,11 +4,11 @@ const TabNavigation = [
     path: "/",
     icon: <i className="fa-solid fa-house"></i>,
   },
-  {
-    title: "Projects",
-    path: "/projects",
-    icon: <i className="fa-regular fa-folder-open"></i>,
-  },
+  // {
+  //   title: "Projects",
+  //   path: "/projects",
+  //   icon: <i className="fa-regular fa-folder-open"></i>,
+  // },
   {
     title: "Resume",
     path: "/resume",
