@@ -1,9 +1,9 @@
 const TabNavigation = [
-  {
-    title: "Home",
-    path: "/",
-    icon: <i className="fa-solid fa-house"></i>,
-  },
+  // {
+  //   title: "Home",
+  //   path: "/",
+  //   icon: <i className="fa-solid fa-house"></i>,
+  // },
   // {
   //   title: "Projects",
   //   path: "/projects",
@@ -11,7 +11,7 @@ const TabNavigation = [
   // },
   {
     title: "Resume",
-    path: "/resume",
+    path: "https://123job.vn/cv/preview/e10b0e03a5bfc30e55c4db18128fe27a",
     icon: <i className="fa-regular fa-file-pdf"></i>,
   },
   {

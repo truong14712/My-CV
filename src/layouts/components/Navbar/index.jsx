@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/system";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,6 +6,7 @@ import {
   selectTheme,
   toggleTheme,
 } from "../../../providers/features/themeSlice.js";
+// import Button from "@mui/material/Button";
 const Navbar = () => {
   const checked = useSelector(selectTheme);
   const currentColor = useSelector(selectCurrentColor);

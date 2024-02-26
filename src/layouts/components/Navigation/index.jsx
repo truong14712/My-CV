@@ -1,11 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TabNavigation from "../../../components/TabNavigation";
 import { selectTheme } from "../../../providers/features/themeSlice";
 import { useSelector } from "react-redux";
 
 const Navigation = () => {
-  const location = useLocation();
-  const currentPath = location.pathname;
   const checked = useSelector(selectTheme);
 
   return (
@@ -26,15 +24,12 @@ const Navigation = () => {
             return (
               <Link
                 key={index}
-                className={
-                  currentPath == item.path &&
-                  `bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-[16px] ease-linear duration-300 sm:py-3 sm:px-5 `
-                }
+                className={`hover:from-sky-500 hover:to-indigo-500 hover:bg-gradient-to-r  hover:text-white`}
                 title={item.title}
                 style={{
                   padding: "6px 24px",
                   borderRadius: "16px",
-                  color: currentPath == item.path && checked ? "#fff" : "#000",
+                  margin: "0px 20px",
                 }}
                 to={item.path}
               >
