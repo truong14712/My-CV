@@ -7,6 +7,7 @@ import Education from "../components/Education";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentColor } from "../../providers/features/colorSlice";
 import { updateColorAsync } from "../../providers/api/colorThunk";
+import cv from "../../assets/imgCV.jpg";
 
 import Signature from "../components/Signature";
 import { selectTheme } from "../../providers/features/themeSlice";
@@ -108,14 +109,12 @@ const Home = () => {
               About me
             </button>
           </div>
-          <i
-            className="fa-solid fa-t text-[330px] sm:hidden"
+          <img
+            src={cv}
+            alt="mintrudev"
             title="mintrudev"
-            style={{
-              color: currentColor,
-              transition: "color 2s ease",
-            }}
-          ></i>
+            className="w-[330px] sm:hidden"
+          />
         </div>
         <div ref={aboutMeRef}>
           <AboutMe />
