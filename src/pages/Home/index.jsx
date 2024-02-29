@@ -1,29 +1,28 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCurrentColor } from "../../providers/features/colorSlice";
+import { updateColorAsync } from "../../providers/api/colorThunk";
 import AboutMe from "../components/AboutMe";
 import MyProjects from "../components/MyProjects";
 import Skill from "../components/Skill";
 import ContactMe from "../components/ContactMe";
 import Education from "../components/Education";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCurrentColor } from "../../providers/features/colorSlice";
-import { updateColorAsync } from "../../providers/api/colorThunk";
 import cv from "../../assets/imgCV.jpg";
-
 import Signature from "../components/Signature";
 import { selectTheme } from "../../providers/features/themeSlice";
 const Home = () => {
+  const { t } = useTranslation("home");
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const words = ["interest", "enjoy", "excitement", "passion"];
   const [text, setText] = useState(words[0]);
   const dispatch = useDispatch();
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
-
   useEffect(() => {
     // Dispatch the initial color update
     dispatch(updateColorAsync());
   }, [dispatch]);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const currentIndex = words.indexOf(text);
@@ -73,17 +72,18 @@ const Home = () => {
                   : "text-[4rem] font-bold sm:text-[5rem] text-white"
               }
             >
-              Hello <span>👋🏻</span>
+              {t("Hello")}
+              <span>👋🏻</span>
               ,
               <br />
-              I&apos;m{" "}
+              {t("I")}{" "}
               <span
                 style={{
                   color: currentColor,
                   transition: "color 2s ease",
                 }}
               >
-                Minh Truong
+                {t("MinhTruong")}
               </span>
             </h1>
             <p
@@ -106,7 +106,7 @@ const Home = () => {
               className="p-2 mt-[3rem] px-4 rounded-[24px] shadow-lg mb-[6rem]"
               onClick={handleButtonAboutMe}
             >
-              About me
+              {t("About me")}
             </button>
           </div>
           <img
