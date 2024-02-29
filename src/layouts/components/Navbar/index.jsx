@@ -6,11 +6,13 @@ import {
   selectTheme,
   toggleTheme,
 } from "../../../providers/features/themeSlice.js";
-// import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const checked = useSelector(selectTheme);
   const currentColor = useSelector(selectCurrentColor);
   const dispatch = useDispatch();
+  const { i18n } = useTranslation("home");
+  const currentLanguage = i18n.language;
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -62,6 +64,9 @@ const Navbar = () => {
   const handleChange = () => {
     dispatch(toggleTheme());
   };
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <div>
       <nav
@@ -80,8 +85,34 @@ const Navbar = () => {
               transition: "color 2s ease",
             }}
           ></i>
-          <div>
+          <div className="flex items-center">
             <MaterialUISwitch checked={checked} onChange={handleChange} />
+            <div className="mt-2 ml-3">
+              <button
+                className={
+                  currentLanguage === "en"
+                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 mx-1`
+                    : "px-3 py-2 text-xs border text-center rounded-lg mx-1"
+                }
+                onClick={() => changeLanguage("en")}
+              >
+                <div className={checked ? `w-[30px]` : "w-[30px] text-white"}>
+                  EN
+                </div>
+              </button>
+              <button
+                className={
+                  currentLanguage === "vi"
+                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 mx-1`
+                    : "px-3 py-2 text-xs border text-center rounded-lg mx-1"
+                }
+                onClick={() => changeLanguage("vi")}
+              >
+                <div className={checked ? `w-[30px]` : "w-[30px] text-white"}>
+                  VI
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </nav>

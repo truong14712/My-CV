@@ -1,10 +1,12 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/features/themeSlice";
+import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
+  const { t } = useTranslation("home");
 
   return (
     <div className="pt-[70px] mt-[10%]">
@@ -15,7 +17,7 @@ const AboutMe = () => {
           transition: "color 2s ease",
         }}
       >
-        About me
+        {t("About me")}
       </div>
       <div
         className={
@@ -24,12 +26,13 @@ const AboutMe = () => {
             : "mt-1 text-xl text-center text-white"
         }
       >
-        if you&apos;re <span className="italic font-semibold">wondering</span>{" "}
-        who <span className="italic font-semibold">I am...</span>
+        {t("if you")}
+        <span className="italic font-semibold"> {t("wondering")}</span>{" "}
+        <span className="italic font-semibold">{t("who I am...")}</span>
       </div>
       <div className={checked ? "mt-[24px]" : "mt-[24px] text-white"}>
         <div className="text-lg sm:p-2 md:p-5">
-          Hi, my name is{" "}
+          {t("my name")}{" "}
           <span
             className="px-1 italic"
             style={{
@@ -38,10 +41,9 @@ const AboutMe = () => {
               transition: "background 2s ease",
             }}
           >
-            Minh Truong
+            {t("MinhTruong")}
           </span>
-          , i&apos;m 21 years old. I got a college degree at FPT Polytechnic
-          College in Hanoi (2021-2023). Besides, i am really passionate about{" "}
+          , {t("year old")} {t("FPT Polytechnic")}{" "}
           <span
             className="px-2 italic"
             style={{
@@ -66,11 +68,7 @@ const AboutMe = () => {
         </div>
         <br />
         <div className="text-lg sm:p-2 md:p-5">
-          I started learning web programming in 2021. Before that, I had a
-          background in C / C ++ programming so getting access to javascript is
-          not difficult. I have been in love with javascript since I did not
-          know it, I like it. I searched many different sources to learn about
-          this language for example:{" "}
+          {t("lear")}{" "}
           <span>
             <span className="italic underline"> Developer mozilla</span>,{" "}
             <span className="italic underline">You Don&apos;t Know JS</span>
@@ -78,10 +76,7 @@ const AboutMe = () => {
           ....
         </div>
         <br />
-        <div className="text-lg sm:p-2 md:p-5">
-          I want to be a good person in the field that I have chosen so I tried
-          a lot, worked hard.
-        </div>
+        <div className="text-lg sm:p-2 md:p-5">{t("frontend")}</div>
       </div>
     </div>
   );
