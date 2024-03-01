@@ -1,9 +1,12 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/features/themeSlice";
+import { useTranslation } from "react-i18next";
+
 const ContactMe = () => {
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
+  const { t } = useTranslation("home");
 
   return (
     <div className="my-[25px] py-[25px]">
@@ -14,7 +17,7 @@ const ContactMe = () => {
           transition: "color 2s ease",
         }}
       >
-        Contact Me
+        {t("contact")}
       </div>
       <div>
         <ul className="flex items-center justify-center mt-5 ">

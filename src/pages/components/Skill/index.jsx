@@ -1,20 +1,22 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/features/themeSlice";
+import { useTranslation } from "react-i18next";
 const Skill = () => {
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
+  const { t } = useTranslation("home");
 
   return (
     <div className="">
       <div
         className={
           checked
-            ? "mt-[30px] font-semibold text-3xl text-center mb-2"
-            : "mt-[30px] font-semibold text-3xl text-center text-white mb-2"
+            ? "mt-[30px] font-semibold text-3xl text-center mb-2 p-2"
+            : "mt-[30px] font-semibold text-3xl text-center text-white mb-2 p-2"
         }
       >
-        My current{" "}
+        {t("My current")}{" "}
         <span
           className="px-1 italic"
           style={{
@@ -23,9 +25,9 @@ const Skill = () => {
             transition: "background 2s ease",
           }}
         >
-          stack
+          {t("stack")}
         </span>{" "}
-        of{" "}
+        {t("of")}{" "}
         <span
           className="px-1 italic"
           style={{
@@ -34,9 +36,9 @@ const Skill = () => {
             transition: "background 2s ease",
           }}
         >
-          languages/technologies{" "}
+          {t("languages/technologies")}{" "}
         </span>
-        is:
+        {t("is")}:
       </div>
       <div className="flex flex-wrap items-center justify-center 2xl:w-[860px] mx-auto py-5 gap-[10px]  sm:p-2 sm:w-[380px] md:w-[720px]">
         <img
