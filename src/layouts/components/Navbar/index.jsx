@@ -91,7 +91,7 @@ const Navbar = () => {
               <button
                 className={
                   currentLanguage === "en"
-                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 mx-1`
+                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg mx-1`
                     : "px-3 py-2 text-xs border text-center rounded-lg mx-1"
                 }
                 onClick={() => changeLanguage("en")}
@@ -103,7 +103,7 @@ const Navbar = () => {
               <button
                 className={
                   currentLanguage === "vi"
-                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 mx-1`
+                    ? `px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg mx-1`
                     : "px-3 py-2 text-xs border text-center rounded-lg mx-1"
                 }
                 onClick={() => changeLanguage("vi")}

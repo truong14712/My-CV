@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/features/themeSlice";
+import { useTranslation } from "react-i18next";
 
 const MyProjects = () => {
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
+  const { t } = useTranslation("home");
 
   return (
     <div className="my-[25px] py-[25px] sm:p-3 md:p-3">
@@ -17,7 +19,7 @@ const MyProjects = () => {
           transition: "color 2s ease",
         }}
       >
-        My Projects
+        {t("my projects")}
       </div>
       <div className="grid grid-cols-3 gap-10 sm:grid-cols-1 md:grid-cols-2 sm:gap-5">
         {projects.map((project) => {

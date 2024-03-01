@@ -1,10 +1,12 @@
 import { selectCurrentColor } from "../../../providers/features/colorSlice";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/features/themeSlice";
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
   const currentColor = useSelector(selectCurrentColor);
   const checked = useSelector(selectTheme);
+  const { t } = useTranslation("home");
 
   return (
     <div className="my-[25px] py-[25px] sm:p-3 md:p-3">
@@ -15,17 +17,17 @@ const Education = () => {
           transition: "color 2s ease",
         }}
       >
-        Education
+        {t("education")}
       </div>
       <div className="flex items-center justify-between sm:flex-col">
         <div
-          className="text-2xl px-1"
+          className="px-1 text-2xl"
           style={{
             transition: "color 2s ease",
             color: currentColor,
           }}
         >
-          FPT Polytechnic College in Hanoi
+          {t("name education")}
         </div>
         <div
           style={{
@@ -42,17 +44,14 @@ const Education = () => {
           checked ? "my-3 text-lg w-[90%]" : "my-3 text-lg w-[90%] text-white"
         }
       >
-        Because I like interfaces and functional programming, I majored in
-        front-end
+        {t("because")}
       </div>
       <div
         className={
           checked ? "my-3 text-lg w-[90%]" : "my-3 text-lg w-[90%] text-white"
         }
       >
-        I really enjoy my school, where I make new friends and we study
-        together. I also had moments standing on lectern to teach my classmates
-        about programming.
+        {t("introduce education")}
       </div>
 
       <div
@@ -60,8 +59,7 @@ const Education = () => {
           checked ? "my-3 text-lg w-[90%]" : "my-3 text-lg w-[90%] text-white"
         }
       >
-        After 2 years and 4 months of college, I succeeded with my graduation
-        thesis on programming:{" "}
+        {t("result")}{" "}
         <span
           style={{
             background: currentColor,
@@ -72,14 +70,14 @@ const Education = () => {
         >
           ReactJS and NodeJS
         </span>
-        , building job searches and applying for jobs.
+        , {t("project")}
       </div>
       <div
         className={
           checked ? "my-3 text-lg w-[90%]" : "my-3 text-lg w-[90%] text-white"
         }
       >
-        I received an excellent degree with an average score of 8.5.
+        {t("graduation")}
       </div>
     </div>
   );
